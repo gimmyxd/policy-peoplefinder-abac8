@@ -18,12 +18,12 @@ jobs:
 
     - name: Read config
       id: config
-      uses: opcr-io/ga-yaml-parser@v0.1.1
+      uses: opcr-io/ga-yaml-parser@v0.1
       with:
         file: .github/config.yaml
 
     - name: List Sver Tags
-      uses: aserto-dev/sver-action@v0.0.14
+      uses: aserto-dev/sver-action@v0
       id: "sver"
       with:
         docker_image: ${{ steps.config.outputs.repo }}
